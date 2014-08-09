@@ -17,7 +17,7 @@
         echo "You need to run:\n"
 
         echo "\nThen you can do: \n\n"
-        echo "cd /mount/blog/ && jekyll serve --watch"
+        echo "cd /mount/blog/ && bundle install && jekyll serve --watch"
 
 SCRIPT
 
