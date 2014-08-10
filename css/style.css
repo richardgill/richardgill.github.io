@@ -1,6 +1,7 @@
 /* Google Webfonts */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600);
 @import url(http://fonts.googleapis.com/css?family=Karla:700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:700);
 
 /* Fallback */
 header, footer, section, article, nav, aside { display: block }
@@ -656,12 +657,12 @@ body > footer {
 pre, code {
     background: #f8f7fa;
     padding: 34px;
-    font-family: "Karla", sans-serif;
+    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
     color: #4b505a;
     font-size: 1rem;
     margin: 34px 0; }
 
-code { padding: 3px 6px; }
+code { padding: 0px; }
 
 .highlight { background: #ffffff }
 .highlight .c { color: #4b505a }

@@ -13,14 +13,11 @@
 
         echo "Running container"
 
-
-        echo "You need to run:\n"
-
-        echo "\nThen you can do: \n\n"
+        echo "\nRunning command: \n\n"
         echo "cd /mount/blog/ && bundle install && bundle exec jekyll serve --watch --drafts"
 
 SCRIPT
 
-sudo docker run -v $PWD:/mount/blog/ -p 4000:80 -e IP=$(hostname -I | awk '{print $1}') -i -t blog bash -c "cd /mount/blog/ && bundle install && bundle exec jekyll serve --watch --drafts"
+sudo docker run -v $PWD:/mount/blog/ -p 4000:4000 -e IP=$(hostname -I | awk '{print $1}') -i -t blog bash -c "cd /mount/blog/ && bundle install && bundle exec jekyll serve --watch --drafts && bash"
 
 }
