@@ -153,7 +153,7 @@ h5 {
     display: inline-block;
     width: 22px;
     height: 12px;
-    background: url(/images/buttons-light.svg) no-repeat -108px -11px;
+    background: url(../images/buttons-light.svg) no-repeat -108px -11px;
     background-size: 170px 34px;
     text-indent: -9999px;
     margin: 0 4px; }
@@ -164,7 +164,7 @@ h5 {
     display: block;
     width: 34px;
     height: 34px;
-    background: url(/images/buttons-light.svg) no-repeat -136px 0;
+    background: url(../images/buttons-light.svg) no-repeat -136px 0;
     background-size: 170px 34px;
     text-indent: -9999px; }
 
@@ -239,7 +239,7 @@ body > header {
         height: 34px;
         position: absolute;
         top: 0;
-        background: url(/images/buttons-light.svg) no-repeat;
+        background: url(../images/buttons-light.svg) no-repeat;
         background-size: 170px 34px; }
 
     body > header .logo:active:after, body > header .toggle:active:after { top: 1px }
@@ -301,7 +301,7 @@ body > header {
                     display: block;
                     width: 22px;
                     height: 12px;
-                    background: url(/images/buttons-dark.svg) no-repeat -6px -11px;
+                    background: url(../images/buttons-dark.svg) no-repeat -6px -11px;
                     background-size: 100px 34px;
                     position: absolute;
                     top: 5px;
@@ -392,7 +392,7 @@ body > header {
 
     .content article .body .more {
         display: block;
-        background: url(/images/buttons-dark.svg) no-repeat -6px -11px;
+        background: url(../images/buttons-dark.svg) no-repeat -6px -11px;
         background-size: 100px 34px;
         margin: 10px 0 0; }
 
@@ -580,7 +580,7 @@ body > header {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/images/buttons-dark.svg) no-repeat -34px 0;
+    background: url(../images/buttons-dark.svg) no-repeat -34px 0;
     background-size: 100px 34px; }
 
 .content article footer .pagination .button:hover { color: #191a1a }
