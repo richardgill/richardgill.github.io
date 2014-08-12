@@ -1,10 +1,28 @@
 <meta charset="utf-8">
 <link href="{{ site.baseurl }}/css/style.css" rel="stylesheet">
 
+
+
   <section class="content">
     <article>
+      <header class="gradient-1 hidden visible animated fadeInDownBig" data-animation="fadeInDownBig">
+      
+        <div class="overlay" style="background-image: url(/images/posts/docker_wide.png); " data-parallax="9"></div>
+      
+        <div class="excerpt">
+        
+          <span class="title">Richard Gill</span>
+      
+          <h1>{{page.title}}</h1>
+          
+          <p>{{page.summary}}</p>
+          
+          <span class="meta">Published <b>{{ page.date | date: "%-d %B %Y" }}</b></span>
+        
+        </div>
+  
+      </header>
       <div class="body">
-        <h2>{{page.title}}</h2>
         {{content}}
       </div>
     </article>

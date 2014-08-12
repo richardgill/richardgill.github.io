@@ -3,6 +3,7 @@ layout: post
 category : learning
 tagline: "Supporting tagline"
 tags : [docker, seed-project]
+summary: "Setting up a project should be easy. You can use docker to allow others to have your project running in just one command."
 ---
 
 [Docker](https://www.docker.io) is a tool for creating lighter weight virtual machines (called *containers*) for linux. The idea is you can define a docker *image* which anyone else can repeatably use and put it in the [Docker index](https://index.docker.io) a repository of pre-made images.
