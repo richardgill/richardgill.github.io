@@ -3,7 +3,7 @@ layout: post
 category : productivity
 tagline: "Supporting tagline"
 tags : [docker, seed-project]
-summary: "Setting up a project should be easy. You can use docker to allow others to have your project running in just one command."
+summary: "Setting up a project should be easy. You can use docker to allow others to get your project running in just one command."
 header_image: "docker_wide.png"
 ---
 
@@ -81,7 +81,7 @@ sudo docker run
 * `sudo docker run` Run a docker container
 * `-v $PWD:/code/` Mount the current directory: `$PWD` to the directory `/code/` inside the container
 * `-p 9000:9000 -p 9876:9876 -p 4444:4444 -p 35729:35729` Make those ports visable to the outside world.
-* `-i -t` Means that the container waits for your input, rather than spawning in the background.
+*`-i -t` Means that the container waits for your input, rather than spawning in the background.
 * `bash -c "cd /code/ && npm install && grunt serve"` The command to run: Open up a bash and run the command `cd /code/ && npm install && grunt serve`
 
 ## The advantages of project setup being checked-in
