@@ -1,6 +1,6 @@
 ---
 layout: post
-category : learning
+category : productivity
 tagline: "Supporting tagline"
 tags : [docker, seed-project]
 summary: "Setting up a project should be easy. You can use docker to allow others to have your project running in just one command."
