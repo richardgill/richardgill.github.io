@@ -70,7 +70,7 @@ sudo docker build -t angular_seed .
 #and runs the commands to get your project running.
 sudo docker run
 \ -v $PWD:/code/ 
-\ -p 9000:9000 -p 9876:9876 -p 4444:4444 -p 35729:35729 
+\ -p 9000:9000 
 \ -i -t angular_seed
 \ bash -c "cd /code/ && npm install && grunt serve"
 
@@ -80,11 +80,11 @@ sudo docker run
 
 * `sudo docker run` Run a docker container
 * `-v $PWD:/code/` Mount the current directory: `$PWD` to the directory `/code/` inside the container
-* `-p 9000:9000 -p 9876:9876 -p 4444:4444 -p 35729:35729` Make those ports visable to the outside world.
-*`-i -t` Means that the container waits for your input, rather than spawning in the background.
+* `-p 9000:9000` Make those port 9000 visable to the outside world.
+* `-i -t` Means that the container waits for your input, rather than spawning in the background.
 * `bash -c "cd /code/ && npm install && grunt serve"` The command to run: Open up a bash and run the command `cd /code/ && npm install && grunt serve`
 
-## The advantages of project setup being checked-in
+### The advantages of project setup being checked-in
 This means the knowledge of how to get the code base running is stored in version control rather than in people's heads.
 This makes getting new people involved on the project **quick**, so hopefully we can focus on doing important stuff and not installing the right version of tool X.
 
