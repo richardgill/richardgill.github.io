@@ -9,12 +9,13 @@ encoding: utf-8
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Richard Gill
+title: Richard Gill
 tagline: Tagline goes here
-author :
-  name : Richard Gill
-  email : richard@rgill.co.uk
-  github : richardgill
-  twitter : richardmgill
+author:
+  name: Richard Gill
+  email: richard@rgill.co.uk
+  github: richardgill
+  twitter: richardmgill
+  linkedin: richard-gill/22/b0b/348/
 
 baseurl: /blog
