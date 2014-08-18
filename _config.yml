@@ -1,6 +1,6 @@
 # This is the default format.
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:year/:month/:day/:title
+permalink: blog/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
@@ -18,4 +18,4 @@ author:
   twitter: richardmgill
   linkedin: richard-gill/22/b0b/348/
 
-baseurl: /blog
+baseurl: /
