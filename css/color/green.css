@@ -1,0 +1,187 @@
+/*************************************************************/
+/********************* TABLE OF CONTENTS *********************/
+/*************************************************************/
+/**                                                         **/
+/** General Styles                                          **/
+/** Generic Styles                                          **/
+/** Menus                                                   **/
+/**  - Nav Pills                                            **/
+/**  - Main Menu                                            **/
+/** Pagination                                              **/
+/** Tabs                                                    **/
+/** Accordions                                              **/
+/** Buttons                                                 **/
+/** Labels                                                  **/
+/** Progress Bars                                           **/
+/** Colors & Backgrounds                                    **/
+/**  - Text Colors                                          **/
+/**  - Background Colors                                    **/
+/**                                                         **/
+/*************************************************************/
+/*************************************************************/
+
+
+
+/*************************************************************/
+/*********************** General Styles **********************/
+/*************************************************************/
+
+a {
+  color: #c5b933;
+}
+
+
+
+/*************************************************************/
+/*********************** Generic Styles **********************/
+/*************************************************************/
+
+.overlay-color-theme {
+  background: rgba(197,185,51,.8);
+}
+
+
+
+/*************************************************************/
+/*************************** Menus ***************************/
+/*************************************************************/
+
+/** Nav Pills **/
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #bfb65f;
+}
+
+/** Main Menu **/
+.main-menu .active > a,
+.main-menu .nav .open > a,
+.main-menu .nav .open > a:hover,
+.main-menu .nav .open > a:focus,
+.main-menu .nav > li > a:hover,
+.main-menu .nav > li > a:focus,
+.main-menu .nav > li:hover > a,
+.main-menu .nav > li:focus > a {
+  color: #bfb65f;
+}
+
+.main-menu .dropdown-menu > .active > a,
+.main-menu .dropdown-menu > li > a:hover,
+.main-menu .dropdown-menu > li > a:focus {
+  color: #bfb65f;
+}
+
+@media (max-width: 767px) {
+  
+  .main-menu .navbar-toggle {
+    border: 1px solid #bfb65f;
+    background: #bfb65f;
+  }
+  
+}
+
+
+
+/*************************************************************/
+/************************* Pagination ************************/
+/*************************************************************/
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #bfb65f;
+}
+
+
+
+/*************************************************************/
+/**************************** Tabs ***************************/
+/*************************************************************/
+
+.nav-tabs > li > a:hover {
+  color: #bfb65f;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: 1px solid #bfb65f;
+  color: #bfb65f;
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+  color: #bfb65f;
+}
+
+.nav-tabs.nav-justified > .active >a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #bfb65f;
+  color: #bfb65f;
+}
+
+
+
+/*************************************************************/
+/************************* Accordions ************************/
+/*************************************************************/
+
+.panel-primary > .panel-heading {
+  border: 1px solid #bfb65f;
+}
+
+
+
+/*************************************************************/
+/************************** Buttons **************************/
+/*************************************************************/
+
+.btn-primary,
+.open .dropdown-toggle.btn-primary {
+  background-color: #bfb65f;
+}
+
+.btn-link {
+  color: #bfb65f;
+}
+
+
+
+/*************************************************************/
+/*************************** Labels **************************/
+/*************************************************************/
+
+.label-primary {
+  background-color: #bfb65f;
+}
+
+
+
+/*************************************************************/
+/*********************** Progress Bars ***********************/
+/*************************************************************/
+
+.progress-bar-primary {
+  background-color: #bfb65f;
+}
+
+
+
+/*************************************************************/
+/******************** Colors & Backgrounds *******************/
+/*************************************************************/
+
+/** Text Colors **/
+.text-color-theme { color: #bfb65f; }
+
+/** Background Colors **/
+.bg-color-theme { background-color: #bfb65f; }
