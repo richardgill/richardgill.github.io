@@ -2057,3 +2057,10 @@ input[type="number"] {
   }
 }
 **/
+
+.person-circle  {
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  margin-top: 65git ;
+}
