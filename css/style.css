@@ -1515,7 +1515,6 @@ header {
 
 .btn:hover {
   color: #fff;
-  letter-spacing: 0.9px;
 }
 
 .btn + .btn {
