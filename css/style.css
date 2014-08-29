@@ -619,10 +619,20 @@ ul.tags li:last-child {
 /*************************************************************/
 
 /** Region & Block Spacings **/
-.region,
-.block {
-  padding-top: 60px;
-  padding-bottom: 60px;
+@media (max-width: 767px) {
+  .region,
+  .block {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: 767px) {
+  .region,
+  .block {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .region-0 .region,
@@ -722,6 +732,17 @@ header {
           box-shadow: 0 0 4px rgba(0,0,0,.2);
 }
 
+@media (max-width: 767px) {
+  .below-header {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .below-header {
+    padding-top: 60px;
+  }
+}
 
 /*************************************************************/
 /*************************** Menus ***************************/
