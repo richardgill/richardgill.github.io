@@ -1,73 +1,16 @@
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- SEO -->
-<title>Richard Gill</title>
-<meta name="description" content="HTML5 & CSS3 Multipurpose Theme">
-<meta name="keywords" content="HTML5, CSS3, Theme, ThemeForest, Flat, Responsive, Multipurpose, Modern">
-<link type="text/plain" rel="author" href="humans.txt">
-
-<link href="favicon.png" rel="icon" type="image/png">
-
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,700%7cSource+Sans+Pro:700,300' rel='stylesheet' type='text/css'>
-<!-- Bootstrap 3.1.1 -->
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-<!-- ionicons font -->
-<link href="/css/ionicons.min.css" rel="stylesheet">
-<!-- venobox -->
-<link href="/css/venobox.css" rel="stylesheet">
-<!-- Owl Carousel -->
-<link href="/css/owl.carousel.css" rel="stylesheet">
-<link href="/css/owl.theme.css" rel="stylesheet">
-<link href="/css/owl.transitions.css" rel="stylesheet">
-<!-- Custom CSS -->
-<link href="/css/style.css" rel="stylesheet">
-<link href="/css/color/blue.css" rel="stylesheet">
-<!-- jQuery 1.10.2 -->
-<script src="/js/jquery-1.10.2.min.js"></script>
-<!-- jQuery Plugins -->
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/jquery.flexverticalcenter.js"></script>
-<script src="/js/retina-1.1.0.min.js"></script>
-<script src="/js/jquery.smooth-scroll.min.js"></script>
-<script src="/js/venobox.min.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
-<script src="/js/app.js"></script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  var gaId = ("http://richardgill.io" != "") ? 'UA-53792713-1' : 'UA-53792713-2';
-  ga('create', gaId, 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-  <section class="content">
-    <article>
-      <div class="body">
-        
+---
+layout: default
+title: Hello World!
+tagline: Supporting tagline
+---
+{% for post in site.posts %}
   <div class="summary">
     <p>
       <h2>
-        <a href="http://richardgill.io/blog/2014/08/13/docker-for-project-setup">Docker For Project Setup</a>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </h2>
-      <p><p><a href="https://www.docker.io">Docker</a> is a tool for creating lighter weight virtual machines (called <em>containers</em>) for linux. The idea is you can define a docker <em>image</em> which anyone else can repeatably use and put it in the <a href="https://index.docker.io">Docker index</a> a repository of pre-made images.
-Docker has loads of usecases, probably the most obvious is deploying your container to a cloud provider e.g. AWS and then being able to deploy the same container to another provider e.g. Digital Ocean.
-It has the potential to eliminate cloud provider lock-in. Lucas Carlson has written a <a href="http://www.centurylinklabs.com/what-is-docker-and-when-to-use-it/">great primer</a> about what docker is (and isn’t).</p>
-
-</p>
-      <a href="http://richardgill.io/blog/2014/08/13/docker-for-project-setup" title="Read More" class="more">Read More</a>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ site.baseurl }}{{ post.url }}" title="Read More" class="more">Read More</a>
     </p>
   </div>
-
-
-      </div>
-    </article>
-  </section>
+{% endfor %}
