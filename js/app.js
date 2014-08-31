@@ -27,7 +27,7 @@
     if(window.location.pathname == '/') {
       $('.smoothScroll').smoothScroll({
         speed: 600,
-        offset: -80
+        offset: -80 
       });
     }
 
