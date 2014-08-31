@@ -19,3 +19,7 @@ author:
   linkedin: richard-gill/22/b0b/348/
 
 baseurl: http://richardgill.io
+
+page_collections:
+- projects:
+    permalink: /:title

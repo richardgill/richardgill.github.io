@@ -159,47 +159,21 @@ tagline: Supporting tagline
       <div class="portfolio col-xs-12 block">
         <div class="row">
 
-          <div class="portfolio-item col-xs-12 col-sm-4 margin-bottom-30 text-center">
-            <a href="img/portfolio/pix1-th.jpg" class="venobox" data-gall="portfolio">
-              <div class="portfolio-image">
-                <img src="img/portfolio/pix1-th.jpg" class="img-responsive img-full-width" alt="pix1">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h6 class="portfolio-title">Wood logo</h6>
-                    <small class="text-color-theme">Branding</small>
-                  </div> <!-- /portfolio-info -->
-                </div> <!-- /portfolio-overlay -->
-              </div> <!-- /portfolio-image -->
-            </a>
-          </div> <!-- /portfolio-item -->
 
-          <div class="portfolio-item col-xs-12 col-sm-4 margin-bottom-30 text-center">
-            <a href="img/portfolio/pix2-th.jpg" class="venobox" data-gall="portfolio">
-              <div class="portfolio-image">
-                <img src="img/portfolio/pix2-th.jpg" class="img-responsive img-full-width" alt="pix1">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h6 class="portfolio-title">Flyer presentation</h6>
-                    <small class="text-color-theme">Design</small>
-                  </div> <!-- /portfolio-info -->
-                </div> <!-- /portfolio-overlay -->
-              </div> <!-- /portfolio-image -->
-            </a>
-          </div> <!-- /portfolio-item -->
-
-          <div class="portfolio-item col-xs-12 col-sm-4 margin-bottom-30 text-center">
-            <a href="img/portfolio/pix3-th.jpg" class="venobox" data-gall="portfolio">
-              <div class="portfolio-image">
-                <img src="img/portfolio/pix3-th.jpg" class="img-responsive img-full-width" alt="pix1">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info">
-                    <h6 class="portfolio-title">Corporate image</h6>
-                    <small class="text-color-theme">UX/UI</small>
-                  </div> <!-- /portfolio-info -->
-                </div> <!-- /portfolio-overlay -->
-              </div> <!-- /portfolio-image -->
-            </a>
-          </div> <!-- /portfolio-item -->
+          {% for project in site.data['page_collections']['projects'].pages %}
+            <div class="portfolio-item col-xs-12 col-sm-4 margin-bottom-30 text-center">
+              <a href="{{project.url}}" class="" >
+                <div class="portfolio-image">
+                  <img src="{{project.image}}" class="img-responsive img-full-width" alt="pix1">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <h6 class="portfolio-title">{{project.name}}</h6>
+                    </div> <!-- /portfolio-info -->
+                  </div> <!-- /portfolio-overlay -->
+                </div> <!-- /portfolio-image -->
+              </a>
+            </div> <!-- /portfolio-item -->
+          {% endfor %}
 
           <div class="clearfix hidden-xs"></div>
 
