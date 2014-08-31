@@ -7,4 +7,4 @@ name: "Docker angular seed"
 image: "/images/posts/docker_wide.png"
 ---
 
-Docker project :)
+Docker project :) 123
