@@ -24,10 +24,12 @@
     });
 
     // Smooth scroll functionality
-    $('.smoothScroll').smoothScroll({
-      speed: 600,
-      offset: -80
-    });
+    if(window.location.pathname == '/') {
+      $('.smoothScroll').smoothScroll({
+        speed: 600,
+        offset: -80
+      });
+    }
 
     // closing menu on mobile after click on item menu
     $(".navbar li a").click(function(event) {
