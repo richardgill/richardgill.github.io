@@ -2,10 +2,13 @@
 {% include googleAnalytics.html %}
 {% include twitterWidgets.html %}
 
-  <section class="content">
-    <article>
-      <div class="body">
-        {{content}}
-      </div>
-    </article>
-  </section>
+{% include header.html %}
+
+<div id="about" class="region below-header">
+  <div class="container">
+    <div class="col-xs-12 block">
+
+      {{content}}
+    </div> <!-- /div -->
+  </div> <!-- /container -->
+</div> <!-- /about -->
