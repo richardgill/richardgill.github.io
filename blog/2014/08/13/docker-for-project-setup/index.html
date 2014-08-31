@@ -1,0 +1,154 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://richardgill.io/css/blog/style.css" rel="stylesheet">
+<link href="http://richardgill.io/css/blog/normalize.css" rel="stylesheet">
+<script src="http://richardgill.io/js/blog/jquery-2.1.1.min.js"></script>
+<script src="http://richardgill.io/js/blog/viewportchecker.js"></script>
+<script src="http://richardgill.io/js/blog/scripts.js"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  var gaId = ("http://richardgill.io" != "") ? 'UA-53792713-1' : 'UA-53792713-2';
+  ga('create', gaId, 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <section class="content">
+    <article>
+      <header class="gradient-1 hidden visible animated fadeInDownBig" data-animation="fadeInDownBig">
+
+        <div class="overlay" style="background-image: url(http://richardgill.io/images/posts/docker_wide.png); " data-parallax="9"></div>
+
+        <div class="excerpt">
+
+          <span class="title">Richard Gill</span>
+
+          <h1>Docker For Project Setup</h1>
+
+          <p>Setting up a project should be easy. You can use docker to allow others to get your project running in just one command.</p>
+
+          <span class="meta">Published <b>13 August 2014</b></span>
+
+        </div>
+
+      </header>
+      <div class="body">
+        <p><a href="https://www.docker.io">Docker</a> is a tool for creating lighter weight virtual machines (called <em>containers</em>) for linux. The idea is you can define a docker <em>image</em> which anyone else can repeatably use and put it in the <a href="https://index.docker.io">Docker index</a> a repository of pre-made images.
+Docker has loads of usecases, probably the most obvious is deploying your container to a cloud provider e.g. AWS and then being able to deploy the same container to another provider e.g. Digital Ocean.
+It has the potential to eliminate cloud provider lock-in. Lucas Carlson has written a <a href="http://www.centurylinklabs.com/what-is-docker-and-when-to-use-it/">great primer</a> about what docker is (and isn’t).</p>
+
+<h3 id="quicker-project-setup">Quicker project setup</h3>
+<p>Setting up a project using docker can be as simple as:</p>
+
+<h4 id="pre-requisites">Pre-requisites:</h4>
+
+<ul>
+  <li><a href="http://docs.docker.com/installation/ubuntulinux/">Install docker</a></li>
+</ul>
+
+<h4 id="project-setup">Project setup:</h4>
+
+<ul>
+  <li>git clone <project_url></project_url></li>
+  <li>./setupProject.sh</li>
+  <li>Project is running inside docker</li>
+</ul>
+
+<p>There is no need to install packages (e.g. node, java, rails, whatever.), they’re automatically installed inside the docker container.</p>
+
+<h3 id="reproducible-environments-are-good">Reproducible environments are good</h3>
+
+<p>With docker you can check in operating system setup to version control. This is powerful since it eliminates discrepancies
+between running instances of your software. Each developers setup will run the same as each other’s and production. This makes
+finding bugs easier and decreases the chances of a botched release.</p>
+
+<p>For example we can use a <a href="http://docs.docker.com/reference/builder/">Dockerfile</a> to create a Docker container based on ubuntu with python installed:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#Use ubuntu as a base image</span>
+FROM ubuntu
+
+<span class="c">#Run a command</span>
+RUN apt-get -y install python
+
+<span class="c">#Add a file from your project into the container</span>
+ADD /someConfig.json /someConfig.json
+
+<span class="c">#Set an environment variable in the container</span>
+ENV PYTHON_VERSION 3.4.1</code></pre></div>
+
+<p>Our full development environment is reproducible from what is checked in. This has been possible in the past with other tools, for example a full VM image. But Docker can do this quickly and by checking in just a text Dockerfile.</p>
+
+<p>This works great: Want to upgrade the version of python you’re using? Just update the file and check it in. You can be bold with
+upgrading stuff and trying new things without worrying about screwing things up. It transforms things which historically were setup as a one time thing, into something which is now version controlled and can be code reviewed.</p>
+
+<h3 id="setup-with-one-command">Setup with one command</h3>
+
+<p>Add a Dockerfile to the project and a bash script to setup the docker image and run it.
+Anybody can check the project out, run the bash script and the project will just be running.</p>
+
+<h4 id="example-setupsh">Example Setup.sh:</h4>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#Builds your docker image from your docker file.</span>
+sudo docker build -t angular_seed .
+
+<span class="c">#Starts an instance of the image (a container) </span>
+<span class="c">#and runs the commands to get your project running.</span>
+sudo docker run
+<span class="se">\ </span>-v <span class="nv">$PWD</span>:/code/ 
+<span class="se">\ </span>-p 9000:9000 
+<span class="se">\ </span>-i -t angular_seed
+<span class="se">\ </span>bash -c <span class="s2">&quot;cd /code/ &amp;&amp; npm install &amp;&amp; grunt serve; bash&quot;</span></code></pre></div>
+
+<h3 id="what-does-the-command-do">What does the command do</h3>
+
+<ul>
+  <li><code>sudo docker run</code> Run a docker container</li>
+  <li><code>-v $PWD:/code/</code> Mount the current directory: <code>$PWD</code> to the directory <code>/code/</code> inside the container</li>
+  <li><code>-p 9000:9000</code> Make those port 9000 visable to the outside world.</li>
+  <li><code>-i -t</code> Means that the container waits for your input, rather than spawning in the background.</li>
+  <li><code>bash -c "cd /code/ &amp;&amp; npm install &amp;&amp; grunt serve; bash"</code> The command to run: Open up a bash and run the command <code>cd /code/ &amp;&amp; npm install &amp;&amp; grunt serve; bash</code></li>
+</ul>
+
+<h3 id="the-advantages-of-project-setup-being-checked-in">The advantages of project setup being checked-in</h3>
+<p>This means the knowledge of how to get the code base running is stored in version control rather than in people’s heads.
+This makes getting new people involved on the project <strong>quick</strong>, so hopefully we can focus on doing important stuff and not installing the right version of tool X.</p>
+
+<p>I recently created an <a href="https://github.com/richardgill/dockered-angular-seed">angular seed project</a> combining haml, sass and coffeescript in this way. Feel free to take a look :).</p>
+
+      </div>
+      <footer>
+        <div class="author meta">
+          <span class="title">Written by</span>
+
+          <h4>Richard Gill</h4>
+          <p>Full stack developer / hacker, with experience in both the corporate and start-up world. I enjoy learning new technologies and working with bright people on exciting ideas.</p>
+          <a href="mailto:richard@richardgill.io" title="Send E-Mail">Contact</a>
+
+          <ul>
+            <li><a class="icon twitter" href="https://twitter.com/richardmgill"></a></li>
+            <li><a class="icon linkedin" href="http://uk.linkedin.com/pub/richard-gill/22/b0b/348/"></a></li>
+          </ul>
+        </div>
+        <div class="share" data-animation="fadeInUp">
+
+          <span class="title">Share</span>
+
+          <ul>
+            <li><a href="https://twitter.com/home?status=%20http://richardgill.io/blog/2014/08/13/docker-for-project-setup @richardmgill " title="Tweet" class="icon twitter">Tweet</a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://richardgill.io/blog/2014/08/13/docker-for-project-setup " title="Like" class="icon facebook">Like</a></li>
+            <li><a href="https://plus.google.com/share?url=http://richardgill.io/blog/2014/08/13/docker-for-project-setup " title="+1" class="icon google">+1</a></li>
+          </ul>
+
+        </div>
+		  </footer>
+    </article>
+  </section>
