@@ -4,7 +4,7 @@ category : productivity
 tagline: "Supporting tagline"
 tags : [docker, seed-project]
 name: "Docker angular seed"
-image: "/img/portfolio/dockerangular.png"
+image: "/images/portfolio/dockerangular.png"
 ---
 
 A seed node js app which has Angular, Bower, Sass, Coffeescript, Grunt. 
