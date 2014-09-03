@@ -39,7 +39,7 @@ body{
     top:50%; 
     margin-left:-16px; 
     margin-top:-16px;
-    background-image: url(../img/lightbox/preload-circle.png);
+    background-image: url(../images/lightbox/preload-circle.png);
     text-indent: -100px;
     overflow: hidden;
     -webkit-animation: playload 1.4s steps(18) infinite;
@@ -78,7 +78,7 @@ body{
     top:50%; 
     margin-left:-16px; 
     margin-top:-16px;
-    background-image: url(../img/lightbox/preload-ios.png);
+    background-image: url(../images/lightbox/preload-ios.png);
     text-indent: -100px;
     overflow: hidden;
     -webkit-animation: playload 1.4s steps(12) infinite;
@@ -119,7 +119,7 @@ body{
     top:50%; 
     margin-left:-16px; 
     margin-top:-16px;
-    background-image: url(../img/lightbox/preload-dots.png);
+    background-image: url(../images/lightbox/preload-dots.png);
     text-indent: -100px;
     overflow: hidden;
     -webkit-animation: playload 1.4s steps(24) infinite;
@@ -160,7 +160,7 @@ body{
     top:50%; 
     margin-left:-16px; 
     margin-top:-16px;
-    background-image: url(../img/lightbox/preload-quads.png);
+    background-image: url(../images/lightbox/preload-quads.png);
     text-indent: -100px;
     overflow: hidden;
     -webkit-animation: playload 1.4s steps(12) infinite;
@@ -200,7 +200,7 @@ body{
     height: 20px;
     padding: 20px;
     display: block;
-    background: url(../img/lightbox/close.gif) no-repeat;
+    background: url(../images/lightbox/close.gif) no-repeat;
     background-position: center center;
     color: #fff;
     text-indent: -100px;
@@ -219,11 +219,11 @@ body{
 }
 .vbox-prev{
     left: 10px;
-    background: url(../img/lightbox/prev.gif) center center no-repeat;
+    background: url(../images/lightbox/prev.gif) center center no-repeat;
 }
 .vbox-next{
     right: 10px;
-    background: url(../img/lightbox/next.gif) center center no-repeat;
+    background: url(../images/lightbox/next.gif) center center no-repeat;
 }
 
 .vbox-title{
