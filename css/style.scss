@@ -2123,13 +2123,21 @@ input[type="number"] {
   @extend .bg-color-white
 }
 
+
+
+
 .blog-header {
   width: 100%;
-  height: 400px;
   opacity: 0.45;
   background-position: 50% 0px;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: 767px) {
+    height: 700px;
+  }
+  @media (min-width: 768px) {
+    height: 400px;
+  }
 }
 
 .blog-header-gradient {
@@ -2138,7 +2146,12 @@ input[type="number"] {
   background-image: -moz-linear-gradient(-40deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #f3c9d7 90%);
   background-image: -ms-linear-gradient(-40deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #f3c9d7 90%);
   background-image: linear-gradient(-130deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #f3c9d7 90%); 
-  height: 400px;
+  @media (max-width: 767px) {
+    height: 500px;
+  }
+  @media (min-width: 768px) {
+    height: 400px;
+  }
 }
 
 .blog-body {
