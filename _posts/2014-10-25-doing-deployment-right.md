@@ -7,7 +7,7 @@ summary: "*Everything* about your software should be in version control. The env
 header_image: "ship-it-squirrel.png"
 ---
 
-Poor deployment contributes to errors and slow down of feature delivery when teams are building software. I'm going to discuss some principles which enables teams to ship software regularly, with confidence but minimize the
+Poor deployment contributes to errors and slow down of feature delivery when teams are building software. I'm going to discuss some principles which enables teams to ship software regularly, with confidence whilst minimizing the
 probability of deployment related errors.
 
 <!--Programmers have different capabilities, some are better than others. I’ve worked with amazing people who can hold a lot of state in their head. They can model the entire -->
@@ -36,7 +36,7 @@ I’m a big believer that this heuristic is going to allow you to: release you s
 
 ##Step 1 – Check in \*everything\*
 
-Most (sane) people store their code in version control. Nearly every one manages to get all their code and some of their config in version control. 
+Most (sane) people store their code in version control. Nearly everyone manages to get all their code and some of their config in version control. 
 It’s the things which miss the cut which I’m interested in here. The things that your app needs to run which aren’t checked in. 
 Things like: That Nginx config that somebody modified on the production box, your software needs python to be installed, that 
 10 command release procedure somebody does every release, etc.
@@ -44,7 +44,7 @@ Things like: That Nginx config that somebody modified on the production box, you
 ###The Armageddon thought experiment
 
 The way to track down \*everything\* about an application that isn’t checked in to version control, is to think: “If I just had the repo for the project, and a fresh account 
-with your cloud provider (/ or a fresh host). What would I need to do to get my software running, from scratch?”. What stuff would you be installing manually on that host 
+with your cloud provider (or a fresh host). What would I need to do to get my software running from scratch?”. What stuff would you be installing manually on that host 
 from your brain. I think for a lot of apps this exercise is going to go quite badly. Which exact version of NodeJS were you using? What packages did you install on that Ubuntu host? 
 
 This Armageddon exercise seems slightly over dramatic. You’re probably not going to lose your host and forget everything about your app overnight. 
@@ -58,7 +58,7 @@ The next step is obviously automation, it would be far more useful to have some 
 
 There is a problem with having a one-off ‘install my software’ script, you’ll only run it once. So when an Armageddon event happens, it won’t work. Software (scripts included) only 
 works if its being executed regularly. What we really need to do is fully automate the entire deployment so that it’s reproducible, the same thing happens when you do a 
-release from v9 -> v10 that happens when you’re recovering from Armageddon scenario. Executing regularly prevents the description of how to deploy your application falling 
+release from v9 &#8594; v10 that happens when you’re recovering from Armageddon scenario. Executing regularly prevents the description of how to deploy your application falling 
 out of sync with reality.
 
 A good solution to this problem will:
@@ -81,11 +81,11 @@ Full, reproducible automation sounds impossible. It’s pretty hard, but new tec
 An old school classic, but most untracked state can be eliminated by scripts in the language / tool of your choice. You can script your deployment and run those scripts to deploy your software. It’s a pretty good start, and obviously they’re checked in.
 
 ###PaaS
-PaaS helps solve this problem. For example [Heroku](https://www.heroku.com/) is amazing for developer productivity because it has strict rules about what you can and can’t do. And those rules pretty much mean that your deployments are automatic and exercised. If I deleted your Heroku account with all your servers, you would be able to bring your software back in minutes (ok, so your database might be gone :s). PaaS limits what developers can do and makes deployment reproducible.  
+PaaS helps solve this problem. For example [Heroku](https://www.heroku.com/) is amazing for developer productivity because it has strict rules about what you can and can’t do. And those rules pretty much mean that your deployments are automatic and reproducible. If I deleted your Heroku account with all your servers, you would be able to bring your software back in minutes (ok, so your database might be gone :s). PaaS limits what developers can do and makes deployment reproducible.  
 
 ###Virtual Machines
 
-The best way to make sure everything works from scratch is to build an entire VM every time you deploy. It should contain the OS you’re using, the packages / other software you require and the latest build of your software you want to build. 
+The best way to make sure everything works from scratch is to build an entire VM every time you deploy. It should contain the OS you’re using, the packages / other software you require and the latest build of your software you want to release. 
 VMs are a very powerful tool, but they’re slow. Building one from scratch for every deploy hampers productivity. Like so many things, it’s a trade-off and the trade most (but not all) people make is not do this. Because shipping software quickly is also important. Tools like [Vagrant](https://www.vagrantup.com/) can help you to manage VMs.
 
 ###Chef, Puppet and Ansible
@@ -107,7 +107,7 @@ It’s much easier to follow this principle at the beginning of a project. I thi
 
 These behaviours have tonnes of benefits. Version control shines at many things: auditability, code reviews and a living knowledge of why things happened. If you can see the code commits for when you upgraded from Java 7 &#8594; 8 it’s there forever, it’s a pull request for review and it’s completely reproducible from each developer’s environment all the way to production. This rule of thumb also lends itself to resiliency to host failures and scaling your software properly across many hosts. 
 
-Do it right :)
+Deployment. Do it right :)
 
 <br /><br />
 Thanks go to [@jas_raj](https://twitter.com/jas_raj) for help with content and proof reading.
