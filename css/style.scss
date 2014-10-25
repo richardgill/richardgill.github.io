@@ -2097,11 +2097,11 @@ input[type="number"] {
   }
   h3 
   {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   h4 
   {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   code
   {
@@ -2132,8 +2132,9 @@ input[type="number"] {
   background-position: 50% 0px;
   background-repeat: no-repeat;
   background-size: cover;
+  
   @media (max-width: 767px) {
-    height: 700px;
+    height: 525px;
   }
   @media (min-width: 768px) {
     height: 400px;
@@ -2147,7 +2148,7 @@ input[type="number"] {
   background-image: -ms-linear-gradient(-40deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #f3c9d7 90%);
   background-image: linear-gradient(-130deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #f3c9d7 90%); 
   @media (max-width: 767px) {
-    height: 500px;
+    height: 525px;
   }
   @media (min-width: 768px) {
     height: 400px;
@@ -2156,6 +2157,12 @@ input[type="number"] {
 
 .blog-body {
   margin-top: 40px;
+  p {
+    margin-bottom: 20px;
+  }
+  li {
+    margin-bottom: 15px;
+  }
 }
 
 .blog-header-content {
