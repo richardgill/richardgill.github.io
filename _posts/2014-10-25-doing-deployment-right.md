@@ -63,7 +63,7 @@ out of sync with reality.
 
 A good solution to this problem will:
 
-* Work from scratch (a brand new server).
+* Work from scratch (on a brand new server).
 * Be fully automated (no manual steps).
 
 Full, reproducible automation sounds impossible. It’s pretty hard, but new technologies are pushing the boundaries of what is possible. 
@@ -74,7 +74,7 @@ Full, reproducible automation sounds impossible. It’s pretty hard, but new tec
 <!--developers running it locally. If all of this information is checked in and executed regularly that is good. If developers develop in an environment which was -->
 <!--setup the same as production, you’ll find bugs earlier, and you’ll get blindsided by issues less often during releases.-->
 
-## Tools which help to make a reproducible execution environment.
+## Tools which help to make a reproducible execution environment
 
 ###Scripts
 
@@ -93,11 +93,7 @@ VMs are a very powerful tool, but they’re slow. Building one from scratch for 
 These three are all useful for getting hosts into a state where they can run your software. They allow you to treat server configuration as code. They’re flexible tools which enable management of large groups of servers, personally I think of them as more advanced tools for scripting.
 
 ###Containers
-Containers are a tool which kind of looks and feels like a VM. But critically doesn’t have as many overheads. They offer all the isolation and reproducibility that a VM does, you can build your entire OS and packages from scratch every time. But they do it quicker / use less disk space. The most popular and overwhelming player in this space is [Docker](https://www.docker.com/). Containers are a game changer for deployment, they allow tonnes more stuff to be pulled into version control that wasn’t possible before. 
-
-###Others
-
-There are many great tools which help with this. For continuous integration tools like [Travis-CI](https://travis-ci.org/) and [CircleCI](https://circleci.com/) are amazing because they allow you check in some config and they know how to build your software. Other CIs don’t do this, they make you configure them through a web UI and store them in a database…somewhere.
+Containers are a tool which kind of look and feel like a VM. But critically doesn’t have as many overheads. They offer all the isolation and reproducibility that a VM does, you can build your entire OS and packages from scratch every time. But they do it quicker / use less disk space. The most popular and overwhelming player in this space is [Docker](https://www.docker.com/). Containers are a game changer for deployment, they allow tonnes more stuff to be pulled into version control that wasn’t possible before. 
 
 ##Follow the rule of thumb
 
