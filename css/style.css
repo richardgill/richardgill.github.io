@@ -2424,9 +2424,9 @@ input[type="number"] {
   .blog-content h2 {
     font-size: 1.5em; }
   .blog-content h3 {
-    font-size: 1.4em; }
-  .blog-content h4 {
     font-size: 1.3em; }
+  .blog-content h4 {
+    font-size: 1.2em; }
   .blog-content code {
     font-size: 0.7em;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
@@ -2447,7 +2447,7 @@ input[type="number"] {
   background-size: cover; }
   @media (max-width: 767px) {
     .blog-header {
-      height: 700px; } }
+      height: 525px; } }
   @media (min-width: 768px) {
     .blog-header {
       height: 400px; } }
@@ -2460,13 +2460,17 @@ input[type="number"] {
   background-image: linear-gradient(-130deg, #0e153a 10%, #4a4c7b 35%, #a18cab 65%, #f3c9d7 90%); }
   @media (max-width: 767px) {
     .blog-header-gradient {
-      height: 500px; } }
+      height: 525px; } }
   @media (min-width: 768px) {
     .blog-header-gradient {
       height: 400px; } }
 
 .blog-body {
   margin-top: 40px; }
+  .blog-body p {
+    margin-bottom: 20px; }
+  .blog-body li {
+    margin-bottom: 15px; }
 
 .blog-header-content {
   opacity: 1;

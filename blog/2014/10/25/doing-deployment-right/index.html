@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Richard Gill</title>
+<meta name="description" content="Richard Gill's CV, portfolio and blog">
+<meta name="keywords" content="Richard Gill developer full stack fullstack contractor freelancer">
+<link type="text/plain" rel="author" href="humans.txt">
+
+<link href="favicon.png" rel="icon" type="image/png">
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700%7cSource+Sans+Pro:700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
+<!-- Bootstrap 3.1.1 -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<!-- ionicons font -->
+<link href="/css/ionicons.min.css" rel="stylesheet">
+
+<!-- venobox -->
+<link href="/css/venobox.css" rel="stylesheet">
+<!-- Owl Carousel -->
+<link href="/css/owl.carousel.css" rel="stylesheet">
+<link href="/css/owl.theme.css" rel="stylesheet">
+<link href="/css/owl.transitions.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/color/blue.css" rel="stylesheet">
+<!-- jQuery 1.10.2 -->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<!-- jQuery Plugins -->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.flexverticalcenter.js"></script>
+<script src="/js/retina-1.1.0.min.js"></script>
+<script src="/js/jquery.smooth-scroll.min.js"></script>
+<script src="/js/venobox.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/app.js"></script>
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  var gaId = ("http://richardgill.io" != "") ? 'UA-53792713-1' : 'UA-53792713-2';
+  ga('create', gaId, 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </head>
+  <body>
+    <header>
+  <div class="container">
+    <div class="row">
+
+      <div id="logo" class="col-xs-6 col-sm-12 col-md-3 text-center-sm text-left-xs">
+        <a href="/"><img src="/images/logo.png" class="img-responsive" alt="logo" title="logo"></a>
+      </div> <!-- /logo -->
+
+      <div id="menu" class="col-xs-6 col-sm-12 col-md-9">
+        <nav class="navbar main-menu" role="navigation">
+          <!-- Menu button for mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">menu</button>
+          </div>
+      
+          <!-- Navigation links -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-right navbar-nav">
+              <li><a class="smoothScroll" href="/#about">About</a></li>
+              <li><a class="smoothScroll" href="/#skills">Skills</a></li>
+              <li><a class="smoothScroll" href="/#projects">Projects</a></li>
+              <li><a class="smoothScroll" href="/#blog">Blog</a></li>
+              <li><a class="smoothScroll" href="/#contact">Contact</a></li>
+            </ul>
+          </div> <!-- /navbar-collapse -->
+        </nav>
+      </div> <!-- /menu -->
+
+    </div> <!-- /row -->
+  </div> <!-- container -->
+</header>
+
+  
+    <div class="blog-content">
+      <div class="blog-header-gradient">
+        <div class="blog-header overlay" style="background-image: url(http://richardgill.io/images/posts/ship-it-squirrel.png)">
+      
+        </div>
+        <div class="blog-header-content col-xs-12 col-md-6 col-md-offset-3">
+          <h1>Doing Deployment Right</h1>
+          <p>*Everything* about your software should be in version control. The environment your software runs in should be built from scratch, regularly.</p>
+          <span class="meta">Published <b>25 October 2014</b></span>
+        </div> 
+      </div>
+      
+      <div class="blog-body col-xs-12 col-md-6 col-md-offset-3" >
+        <p>Poor deployment contributes to errors and slow down of feature delivery when teams are building software. I’m going to discuss some principles which enables teams to ship software regularly, with confidence whilst minimizing the
+probability of deployment related errors.</p>
+
+<!--Programmers have different capabilities, some are better than others. I’ve worked with amazing people who can hold a lot of state in their head. They can model the entire -->
+<!--production system in their mind, as if they’re part of the machine – good for them. But what we need is to engineer systems in a way that works for the lowest common denominator. -->
+<!--For when these people go on holiday, or have a bad day, or its 4 am, or that system gets shipped off to another team. Amazing engineers need to use their smarts to make -->
+<!--deployments easy enough that they could do it if their IQs all dropped by 40 points. When the model in people’s heads of how the production system works is slightly incorrect, -->
+<!--that’s when a production error happens. -->
+
+<!--There are bunch of principles talented engineers follow when they’re writing code in “enterprise”, “don’t break things” mode (not hacking). There are many books on these -->
+<!--topics, personally I like [The Pragmatic Programmer](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X). They include things like: Don’t Repeat Yourself (DRY), Don’t have state all over your program / Automate -->
+<!--repetitive developer tasks (continuous builds, tests). These are broad rules of thumb which extend across all languages and platforms. General principles -->
+<!--which help people write software which doesn’t fall apart in the long term.-->
+
+<!--The longer I program I’ve realised there is a general principle I’m following that I’ve seen followed less regularly: Bundle everything describing your software with your software.-->
+
+<!--Perhaps this seems obvious. I doubt many people would disagree with this rule of thumb. But I think when you get into specific examples people often don’t seem to do it.-->
+
+<h2 id="the-rule-of-thumb">The rule of thumb</h2>
+
+<p>The rules are simple:</p>
+
+<ul>
+  <li>Check in *everything* that describes your application and how it behaves. Not just the source code.</li>
+  <li>Use *everything* to make sure your entire environment is rebuilt from scratch, every time you deploy.</li>
+</ul>
+
+<p>I’m a big believer that this heuristic is going to allow you to: release you software frequently, with confidence and have less bugs / screw ups hitting production. </p>
+
+<h2 id="step-1--check-in-everything">Step 1 – Check in *everything*</h2>
+
+<p>Most (sane) people store their code in version control. Nearly everyone manages to get all their code and some of their config in version control. 
+It’s the things which miss the cut which I’m interested in here. The things that your app needs to run which aren’t checked in. 
+Things like: That Nginx config that somebody modified on the production box, your software needs python to be installed, that 
+10 command release procedure somebody does every release, etc.</p>
+
+<h3 id="the-armageddon-thought-experiment">The Armageddon thought experiment</h3>
+
+<p>The way to track down *everything* about an application that isn’t checked in to version control, is to think: “If I just had the repo for the project, and a fresh account 
+with your cloud provider (or a fresh host). What would I need to do to get my software running from scratch?”. What stuff would you be installing manually on that host 
+from your brain. I think for a lot of apps this exercise is going to go quite badly. Which exact version of NodeJS were you using? What packages did you install on that Ubuntu host? </p>
+
+<p>This Armageddon exercise seems slightly over dramatic. You’re probably not going to lose your host and forget everything about your app overnight. 
+But if you can get these things checked in you’ll be in a better position. In maybe an hour you could go away collect all this information and check 
+it in as a .txt / .md file. That’s useful, during the Armageddon task above you’d be looking through those text files, you can do everything it says. </p>
+
+<h2 id="step-2---automated-and-executed-regularly">Step 2 - Automated and executed regularly</h2>
+
+<p>You don’t really want a bunch of documentation that tells you need to install some Linux packages and tweak that config file, set that environment variable etc. . 
+The next step is obviously automation, it would be far more useful to have some scripts which just do the whole thing. Now after Armageddon you can smugly run your script.</p>
+
+<p>There is a problem with having a one-off ‘install my software’ script, you’ll only run it once. So when an Armageddon event happens, it won’t work. Software (scripts included) only 
+works if its being executed regularly. What we really need to do is fully automate the entire deployment so that it’s reproducible, the same thing happens when you do a 
+release from v9 → v10 that happens when you’re recovering from Armageddon scenario. Executing regularly prevents the description of how to deploy your application falling 
+out of sync with reality.</p>
+
+<p>A good solution to this problem will:</p>
+
+<ul>
+  <li>Work from scratch (on a brand new server).</li>
+  <li>Be fully automated (no manual steps).</li>
+</ul>
+
+<p>Full, reproducible automation sounds impossible. It’s pretty hard, but new technologies are pushing the boundaries of what is possible. </p>
+
+<!--##Beyond deployment-->
+
+<!--If I extend the idea of ”deployment” to normal operation of your software. Not just running it in production, but running it in UAT, continuous integration (builds, tests etc.), -->
+<!--developers running it locally. If all of this information is checked in and executed regularly that is good. If developers develop in an environment which was -->
+<!--setup the same as production, you’ll find bugs earlier, and you’ll get blindsided by issues less often during releases.-->
+
+<h2 id="tools-which-help-to-make-a-reproducible-execution-environment">Tools which help to make a reproducible execution environment</h2>
+
+<h3 id="scripts">Scripts</h3>
+
+<p>An old school classic, but most untracked state can be eliminated by scripts in the language / tool of your choice. You can script your deployment and run those scripts to deploy your software. It’s a pretty good start, and obviously they’re checked in.</p>
+
+<h3 id="paas">PaaS</h3>
+<p>PaaS helps solve this problem. For example <a href="https://www.heroku.com/">Heroku</a> is amazing for developer productivity because it has strict rules about what you can and can’t do. And those rules pretty much mean that your deployments are automatic and reproducible. If I deleted your Heroku account with all your servers, you would be able to bring your software back in minutes (ok, so your database might be gone :s). PaaS limits what developers can do and makes deployment reproducible.  </p>
+
+<h3 id="virtual-machines">Virtual Machines</h3>
+
+<p>The best way to make sure everything works from scratch is to build an entire VM every time you deploy. It should contain the OS you’re using, the packages / other software you require and the latest build of your software you want to release. 
+VMs are a very powerful tool, but they’re slow. Building one from scratch for every deploy hampers productivity. Like so many things, it’s a trade-off and the trade most (but not all) people make is not do this. Because shipping software quickly is also important. Tools like <a href="https://www.vagrantup.com/">Vagrant</a> can help you to manage VMs.</p>
+
+<h3 id="chef-puppet-and-ansible">Chef, Puppet and Ansible</h3>
+
+<p>These three are all useful for getting hosts into a state where they can run your software. They allow you to treat server configuration as code. They’re flexible tools which enable management of large groups of servers, personally I think of them as more advanced tools for scripting.</p>
+
+<h3 id="containers">Containers</h3>
+<p>Containers are a tool which kind of look and feel like a VM. But critically doesn’t have as many overheads. They offer all the isolation and reproducibility that a VM does, you can build your entire OS and packages from scratch every time. But they do it quicker / use less disk space. The most popular and overwhelming player in this space is <a href="https://www.docker.com/">Docker</a>. Containers are a game changer for deployment, they allow tonnes more stuff to be pulled into version control that wasn’t possible before. </p>
+
+<h2 id="follow-the-rule-of-thumb">Follow the rule of thumb</h2>
+
+<p>So if in doubt: Step 1) Check ‘it’ in.  Step 2) Automate it and execute it regularly. If you follow this principle you won’t go too wrong with deployment. The tricky thing isn’t implementing steps 1) and 2). It’s identifying the things you need to check in and automate. This is hard, it involves thinking critically about your development processes to find all that state which your application relies on which isn’t checked in. </p>
+
+<p>It’s much easier to follow this principle at the beginning of a project. I think the cheapest way to follow this mantra is to use a decent PaaS, unfortunately for people in enterprise environments this isn’t always an option. If a PaaS isn’t flexible enough / you can’t use one then containers are the next best thing. Docker is still maturing and it’s just a building block which needs better tooling around it, but ultimately most PaaS will probably end up being implemented in Docker and then at that point, the two start to converge. </p>
+
+<p>These behaviours have tonnes of benefits. Version control shines at many things: auditability, code reviews and a living knowledge of why things happened. If you can see the code commits for when you upgraded from Java 7 → 8 it’s there forever, it’s a pull request for review and it’s completely reproducible from each developer’s environment all the way to production. This rule of thumb also lends itself to resiliency to host failures and scaling your software properly across many hosts. </p>
+
+<p>Deployment. Do it right :)</p>
+
+<p><br /><br />
+Thanks go to <a href="https://twitter.com/jas_raj">@jas_raj</a> for help with content and proof reading.</p>
+
+      </div>
+    
+    </div>
+  
+    <div class="blog-footer col-xs-12 col-md-6 col-md-offset-3" >
+      <hr />
+      <h4>Written by<h3>
+      <h4><a href="/">Richard Gill</a></h3>
+      <p>Full stack developer / hacker, with experience in both the corporate and start-up world. I enjoy learning new technologies and working with bright people on exciting ideas.</p>
+    </div>
+  <div id="contact" class="contact-info col-xs-12 col-md-8 col-md-offset-2 text-center block">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-4">
+      <h6>Location</h6>
+      <p>Central London</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 margin-top-xs-40">
+      <h6>Email</h6>
+      <p><a href="mailto:richard@richardgill.io">richard@richardgill.io</a></p>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 margin-top-xs-40">
+      <h6>Social</h6>
+      <p>
+        <a href="https://twitter.com/richardmgill"><i class="contact-icon ion-social-twitter"></i></a>
+        
+        <a href="http://uk.linkedin.com/pub/richard-gill/22/b0b/348/"><i class="contact-icon ion-social-linkedin"></i></a>
+        <a href="https://github.com/richardgill"><i class="contact-icon ion-social-github"></i></a>
+      </p>
+    </div>
+
+  </div> <!-- /row -->
+</div> <!-- /contact-info -->
+
+  </body>
+</html>
